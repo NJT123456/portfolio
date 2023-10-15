@@ -1,7 +1,7 @@
 import Nav from "@/components/nav";
 import Homepage from "@/components/home";
 import Project from "@/components/Project";
-import Contact from "@/components/Contact";
+
 import { useEffect } from "react";
 import Typed from "typed.js";
 
@@ -38,7 +38,6 @@ export default function Home() {
       <Nav />
       <Homepage />
       <Project />
-      <Contact />
     </>
   );
 }

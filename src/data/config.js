@@ -21,10 +21,6 @@ export default {
       name: "Project",
       url: "/#project",
     },
-    {
-      name: "Contact",
-      url: "/#contact",
-    },
   ],
 
   projects: [

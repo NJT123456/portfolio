@@ -56,7 +56,7 @@
   }
 
   .home-content h1 {
-    @apply text-6xl font-bold leading-snug md:text-8xl;
+    @apply text-6xl font-bold leading-snug md:text-8xl md:leading-snug;
   }
 
   .home-content p {
