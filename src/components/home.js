@@ -3,8 +3,9 @@ import config from "@/data/config";
 import Link from "next/link";
 
 export default function Homepage() {
-
-  const pdf_url = "http://localhost:3000/Resume_Jinjutha.pdf";
+  const pdf_url =
+    "http://localhost:3000/Resume_Jinjutha.pdf" ||
+    "https://njt123456.github.io/portfolio/Resume_Jinjutha.pdf";
   const downLoad = () => {
     fetch(pdf_url)
       .then((res) => res.blob())
