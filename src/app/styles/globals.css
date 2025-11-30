@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-color: #041f60;
+  --color-second-bg-color: #0476d0;
+  --color-text-color: #fff;
+  --color-main-color: #b4f5f0;
+  --color-second-color: #041f60;
+  --color-third-color: #2ceef0;
+  --background-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border font-sans border-none scroll-smooth outline-none;
+  }
+
+  html {
+    @apply text-[55%] overflow-x-hidden xl:text-[62.5%];
+  }
+
+  body {
+    @apply bg-bg-color text-text-color;
+  }
+
+  section {
+    @apply min-h-[100vh] pt-40 px-[3%] pb-8 lg:px-[9%];
+  }
+
+  h3 {
+    @apply text-5xl font-bold;
+  }
+}
+
+@layer components {
+  /*! Navbar */
+  .header {
+    @apply fixed top-0 left-0 w-full py-8 px-[3%] bg-bg-color flex justify-between items-center z-50 h-auto lg:px-[9%];
+  }
+
+  .logo {
+    @apply text-4xl font-semibold;
+  }
+
+  .navbar a {
+    @apply ml-16 text-3xl hover:text-main-color md:text-2xl;
+  }
+
+  .navbar a.active {
+    @apply text-main-color;
+  }
+
+  /* !home */
+  .home {
+    @apply flex justify-center items-center;
+  }
+
+  .home-content h3 {
+    @apply text-4xl font-bold md:text-5xl;
+  }
+
+  .home-content h3:nth-of-type(2) {
+    @apply mb-8;
+  }
+
+  .home-content h1 {
+    @apply text-6xl font-bold leading-snug md:text-8xl md:leading-snug;
+  }
+
+  .home-content p {
+    @apply text-2xl text-justify;
+  }
+
+  span {
+    @apply text-main-color;
+  }
+
+  .social-media a {
+    @apply inline-flex justify-center items-center w-16 h-16 bg-transparent border-[.2rem] border-solid border-main-color rounded-full
+    text-4xl text-main-color mt-12 mr-6 mb-12 hover:bg-main-color hover:text-second-color hover:shadow-[0_0_1rem_rgb(10,186,181)] 
+    transition-all;
+  }
+
+  .btn {
+    @apply inline-block py-4 px-11 bg-main-color shadow-[0_0_1rem_rgb(10,186,181)] text-3xl text-second-color tracking-widest rounded-[4rem] font-semibold
+    cursor-pointer hover:shadow-none transition-all;
+  }
+
+  /* ! project */
+  .project {
+    @apply bg-second-bg-color;
+  }
+
+  .heading {
+    @apply text-center text-7xl font-bold;
+  }
+
+  .project h2 {
+    @apply mb-12 uppercase md:mb-16;
+  }
+
+  .nameProject {
+    @apply flex items-center justify-center mt-[10px] mx-0 mb-[40px] relative w-full whitespace-nowrap after:content-[''] after:block 
+    after:relative after:top-[2px] after:h-[2px] after:w-full after:ml-[20px] after:bg-bg-color text-[2.5rem] md:text-5xl font-semibold uppercase;
+  }
+
+  .project-container {
+    @apply grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .project-container .project-box {
+    @apply relative rounded-3xl shadow-[0_0_1rem_#041F60] overflow-hidden flex;
+  }
+
+  .project-box img {
+    @apply w-full aspect-video;
+  }
+
+  .project-box:hover img {
+    @apply scale-110 transition-all;
+  }
+
+  .project-box .project-layer {
+    @apply absolute bottom-0 top-0 w-full h-full bg-gradient-to-b from-main-color to-third-color flex justify-center items-center flex-col
+    text-center px-16 text-second-color translate-y-full transition-all;
+  }
+
+  .project-box:hover .project-layer {
+    @apply translate-y-0;
+  }
+
+  .project-layer h4 {
+    @apply text-3xl font-semibold;
+  }
+
+  .project-layer p {
+    @apply text-xl mt-[.3rem] mb-4 font-semibold;
+  }
+
+  .project-layer a {
+    @apply inline-flex justify-center items-center w-20 h-20 bg-text-color rounded-full;
+  }
+
+  .project-layer a i {
+    @apply text-[2rem] text-second-color;
+  }
+
+  /* !contact */
+  .contact h2 {
+    @apply mb-12;
+  }
+
+  .contact form {
+    @apply max-w-[70rem] my-4 mx-auto text-center mb-12;
+  }
+
+  .contact form .input-box {
+    @apply flex justify-between flex-wrap;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    @apply w-full p-6 text-2xl text-text-color bg-second-bg-color rounded-[.8rem] my-[.7rem] mx-0;
+  }
+
+  .contact form textarea {
+    @apply resize-none;
+  }
+
+  .contact form .btn {
+    @apply mt-8;
+  }
+
+  @media (max-width: 1024px) {
+    .project {
+      @apply pb-28;
+    }
+
+    .contact {
+      @apply min-h-[auto];
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      @apply absolute top-full left-0 w-full py-4 px-[3%] bg-bg-color border-t-[.1rem] border-solid border-[rgba(0,0,0,0.2)]
+      shadow-[0_.5rem_1rem_rgba(0,0,0,0.2)] hidden;
+    }
+
+    .navbar.active {
+      @apply block;
+    }
+
+    .navbar a {
+      @apply block my-12 mx-0;
+    }
+  }
+}
+
+.navbar__toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.5s ease-in-out;
+  @apply bg-text-color;
+  display: flex;
+  cursor: pointer;
+}
+
+.navbar__toggle.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar__toggle.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
