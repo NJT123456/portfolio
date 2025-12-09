@@ -4,7 +4,7 @@ import config from "@/app/data/data";
 
 const Homepage = () => {
   const pdf_url =
-    "https://njt123456.github.io/portfolio/QA_Resume_Jinjutha.pdf";
+    "https://njt123456.github.io/portfolio/files/QA_Resume_Jinjutha.pdf";
   const downLoad = () => {
     fetch(pdf_url)
       .then((res) => res.blob())
