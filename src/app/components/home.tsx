@@ -37,7 +37,7 @@ const Homepage = () => {
         </p>
         <div className="social-media">
           {config.socialMedia.map((link, idx) => (
-            <Link href={link.url} key={idx}>
+            <Link href={link.url} key={idx} target="_blank">
               <i className={`fa fa-${link.name}`} />
             </Link>
           ))}
