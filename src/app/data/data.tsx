@@ -11,7 +11,7 @@ const portfolio: Portfolio = {
 
   navLinks: [
     { name: "Home", url: "/#home" },
-    { name: "Projects", url: "/#projects" },
+    { name: "Projects", url: "/#project" },
   ],
 
   projects: [

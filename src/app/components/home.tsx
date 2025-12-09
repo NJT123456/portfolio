@@ -3,15 +3,14 @@ import Link from "next/link";
 import config from "@/app/data/data";
 
 const Homepage = () => {
-  const pdf_url = "/files/QA_Resume_Jinjutha.pdf"; // ไฟล์ใน public/files/
-
+  const pdf_url =
+    "https://njt123456.github.io/portfolio/QA_Resume_Jinjutha.pdf";
   const downLoad = () => {
     fetch(pdf_url)
       .then((res) => res.blob())
       .then((blob) => {
-        const blobURL = window.URL.createObjectURL(blob);
+        const blobURL = window.URL.createObjectURL(new Blob([blob]));
         const fileName = "QA_Resume_Jinjutha.pdf";
-
         const link = document.createElement("a");
         link.href = blobURL;
         link.setAttribute("download", fileName);
