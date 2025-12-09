@@ -6,7 +6,7 @@ const portfolio: Portfolio = {
 
   socialMedia: [
     { name: "github", url: "https://github.com/NJT123456" },
-    { name: "linkedin", url: "www.linkedin.com/in/jinjutha-njt" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/jinjutha-njt/" },
   ],
 
   navLinks: [
