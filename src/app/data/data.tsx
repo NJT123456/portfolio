@@ -16,6 +16,23 @@ const portfolio: Portfolio = {
 
   projects: [
     {
+      nameProject: "Company Testing Projects",
+      Project: [
+        {
+          name: "Keyspace Web Application",
+          desc: "Conducted manual and automated testing with Cypress, increasing regression coverage and reducing repetitive manual effort",
+        },
+        {
+          name: "Smart Lockers Application",
+          desc: "Executed manual functional and usability testing, ensuring secure locker assignment and smooth user experience",
+        },
+        {
+          name: "Meeting Room Booking Application",
+          desc: "Performed manual testing to verify reservation workflows, conflict detection, and system stability",
+        },
+      ],
+    },
+    {
       nameProject: "Academic & Personal Testing Projects",
       Project: [
         {
@@ -38,23 +55,7 @@ const portfolio: Portfolio = {
         },
       ],
     },
-    {
-      nameProject: "Company Testing Projects",
-      Project: [
-        {
-          name: "Keyspace Web Application",
-          desc: "Conducted manual and automated testing with Cypress, increasing regression coverage and reducing repetitive manual effort",
-        },
-        {
-          name: "Smart Lockers Application",
-          desc: "Executed manual functional and usability testing, ensuring secure locker assignment and smooth user experience",
-        },
-        {
-          name: "Meeting Room Booking Application",
-          desc: "Performed manual testing to verify reservation workflows, conflict detection, and system stability",
-        },
-      ],
-    },
+
     {
       nameProject: "Web Applications",
       Project: [
