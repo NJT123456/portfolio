@@ -33,7 +33,7 @@ const portfolio: Portfolio = {
       ],
     },
     {
-      nameProject: "Academic & Personal Testing Projects",
+      nameProject: "Personal Testing Projects",
       Project: [
         {
           name: "Cloud Cover Estimation & Nowcasting Web",
@@ -57,7 +57,7 @@ const portfolio: Portfolio = {
     },
 
     {
-      nameProject: "Web Applications",
+      nameProject: "Academic & Personal Web Applications",
       Project: [
         {
           name: "Fight reservation system",
@@ -80,7 +80,7 @@ const portfolio: Portfolio = {
       ],
     },
     {
-      nameProject: "Machine Learning",
+      nameProject: "Academic Machine Learning",
       Project: [
         {
           name: "Predict Cloud Cover Nowcasting",
