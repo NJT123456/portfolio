@@ -19,7 +19,7 @@ const portfolio: Portfolio = {
       nameProject: "Company Testing Projects",
       Project: [
         {
-          name: "Keyspace Web Application",
+          name: "Web Application",
           desc: "Conducted manual and automated testing with Cypress, increasing regression coverage and reducing repetitive manual effort",
         },
         {
