@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-color: #041f60;
-  --color-second-bg-color: #0476d0;
+  --color-bg-color: #000428;
+  --color-second-bg-color: #004e92;
   --color-text-color: #fff;
   --color-main-color: #b4f5f0;
-  --color-second-color: #041f60;
+  --color-second-color: #000428;
   --color-third-color: #2ceef0;
   --background-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-gradient-conic: conic-gradient(
@@ -56,7 +56,7 @@
 
   /* !home */
   .home {
-    @apply flex justify-center items-center;
+    @apply flex justify-center items-center bg-gradient-to-b from-bg-color to-second-bg-color;
   }
 
   .home-content h3 {
@@ -92,7 +92,7 @@
 
   /* ! project */
   .project {
-    @apply bg-second-bg-color;
+    @apply bg-gradient-to-t to-second-bg-color from-bg-color;
   }
 
   .heading {
@@ -104,8 +104,8 @@
   }
 
   .nameProject {
-    @apply flex items-center justify-center mt-[10px] mx-0 mb-[40px] relative w-full whitespace-nowrap after:content-[''] after:block 
-    after:relative after:top-[2px] after:h-[2px] after:w-full after:ml-[20px] after:bg-bg-color text-[2.5rem] md:text-5xl font-semibold uppercase;
+    @apply flex items-center justify-center mt-[10px] mx-0 mb-[20px] relative w-full whitespace-nowrap after:content-[''] after:block 
+    after:relative after:top-[2px] after:h-[2px] after:w-full after:ml-[20px] after:bg-white text-[2.5rem] md:text-5xl font-semibold uppercase;
   }
 
   .project-container {
@@ -120,7 +120,7 @@
     @apply w-full aspect-video;
   }
 
-  .project-box:hover img {
+  .project-box-img:hover img {
     @apply scale-110 transition-all;
   }
 
@@ -129,8 +129,21 @@
     text-center px-16 text-second-color translate-y-full transition-all;
   }
 
-  .project-box:hover .project-layer {
+  .project-box-img:hover .project-layer {
     @apply translate-y-0;
+  }
+
+  .project-box-no-img {
+    @apply aspect-video absolute bottom-0 top-0 w-full h-full flex justify-center items-center flex-col
+    text-center px-16 text-second-color bg-gradient-to-b from-main-color to-third-color;
+  }
+
+  .project-box-no-img h4 {
+    @apply text-3xl font-semibold;
+  }
+
+  .project-box-no-img p {
+    @apply text-xl mt-[.3rem] mb-4 font-semibold;
   }
 
   .project-layer h4 {

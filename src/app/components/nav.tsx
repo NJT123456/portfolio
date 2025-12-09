@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import config from "@/app/data/data";
+import $ from "jquery";
 
 const Nav = () => {
   const [currentSection, setCurrentSection] = useState<string>("/#home");

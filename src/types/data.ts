@@ -10,9 +10,9 @@ export interface NavLink {
 
 export interface ProjectItem {
   name: string;
-  url: string;
   desc: string;
-  img: string;
+  url?: string;
+  img?: string;
 }
 
 export interface ProjectGroup {
