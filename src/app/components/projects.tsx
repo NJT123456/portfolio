@@ -1,4 +1,3 @@
-import React from "react";
 import config from "@/app/data/data";
 import Image from "next/image";
 import Link from "next/link";
