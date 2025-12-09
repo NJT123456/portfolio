@@ -5,15 +5,16 @@ import config from "@/app/data/data";
 const Homepage = () => {
   const pdf_url =
     "https://njt123456.github.io/portfolio/files/QA_Resume_Jinjutha.pdf";
+
   const downLoad = () => {
     fetch(pdf_url)
       .then((res) => res.blob())
       .then((blob) => {
-        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const blobURL = window.URL.createObjectURL(blob); // ใช้ blob ตรง ๆ
         const fileName = "QA_Resume_Jinjutha.pdf";
         const link = document.createElement("a");
         link.href = blobURL;
-        link.setAttribute("download", fileName);
+        link.download = fileName;
         document.body.appendChild(link);
         link.click();
         link.remove();
